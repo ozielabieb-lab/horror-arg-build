@@ -14,9 +14,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build
+            - name: Build
         working-directory: horror-arg-mod
-        run: gradle build
+        run: gradle build --no-daemon --stacktrace
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
