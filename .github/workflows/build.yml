@@ -17,10 +17,11 @@ jobs:
           gradle-version: '8.8'
 
       - name: Build
+        working-directory: horror-arg-v2
         run: gradle build --no-daemon
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: horror-arg-mod
-          path: build/libs/horror-arg-2.0.0.jar
+          path: horror-arg-v2/build/libs/horror-arg-2.0.0.jar
